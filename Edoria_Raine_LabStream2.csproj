@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.props" Condition="Exists('$(MSBuildToolsPath)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CC694E56-A364-4869-8461-BC21A40DC447}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Edoria_Raine_LabStream</RootNamespace>
+    <AssemblyName>Edoria_Raine_LabStream</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <StartupObject>Edoria_Raine_LabStream.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="TextFileReadException.cs" />
+    <Compile Include="FrmOpenTextFile.cs"><SubType>Form</SubType></Compile>
+    <Compile Include="FrmOpenTextFile.Designer.cs"><DependentUpon>FrmOpenTextFile.cs</DependentUpon></Compile>
+    <Compile Include="FrmRegistration.cs"><SubType>Form</SubType></Compile>
+    <Compile Include="FrmRegistration.Designer.cs"><DependentUpon>FrmRegistration.cs</DependentUpon></Compile>
+    <Compile Include="FrmStudentRecord.cs"><SubType>Form</SubType></Compile>
+    <Compile Include="FrmStudentRecord.Designer.cs"><DependentUpon>FrmStudentRecord.cs</DependentUpon></Compile>
+    <Compile Include="FrmLab1.cs"><SubType>Form</SubType></Compile>
+    <Compile Include="FrmLab1.Designer.cs"><DependentUpon>FrmLab1.cs</DependentUpon></Compile>
+    <Compile Include="FrmFileName.cs"><SubType>Form</SubType></Compile>
+    <Compile Include="FrmFileName.Designer.cs"><DependentUpon>FrmFileName.cs</DependentUpon></Compile>
+    <EmbeddedResource Include="FrmOpenTextFile.resx"><DependentUpon>FrmOpenTextFile.cs</DependentUpon></EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistration.resx"><DependentUpon>FrmRegistration.cs</DependentUpon></EmbeddedResource>
+    <EmbeddedResource Include="FrmStudentRecord.resx"><DependentUpon>FrmStudentRecord.cs</DependentUpon></EmbeddedResource>
+    <EmbeddedResource Include="FrmLab1.resx"><DependentUpon>FrmLab1.cs</DependentUpon></EmbeddedResource>
+    <EmbeddedResource Include="FrmFileName.resx"><DependentUpon>FrmFileName.cs</DependentUpon></EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
